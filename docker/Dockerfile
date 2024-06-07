@@ -1,6 +1,6 @@
 ARG PYTORCH="1.8.1"
-ARG CUDA="10.2"
-ARG CUDNN="7"
+ARG CUDA="11.1"
+ARG CUDNN="8"
 
 FROM pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel
 
@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y git ninja-build libglib2.0-0 libsm6 lib
 
 # Install MMCV
 RUN pip install openmim
-RUN mim install mmengine mmcv
+RUN mim install mmengine mmcv==2.0.0rc4
 
 # Install MMAction2
 RUN conda clean --all
@@ -28,3 +28,5 @@ ENV FORCE_CUDA="1"
 RUN git checkout main
 RUN pip install cython --no-cache-dir
 RUN pip install --no-cache-dir -e .
+RUN pip install "fastapi[all]" "uvicorn[standard]"
+COPY main.py /mmaction2/
