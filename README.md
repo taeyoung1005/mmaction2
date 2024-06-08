@@ -9,9 +9,9 @@
 
 ### 1. Data 준비
 
-[AIHUB 교통사고 영상 데이터](https://aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=597)
+[`AIHUB 교통사고 영상 데이터`](https://aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=597)
 
-[데이터 설명서](vscode-local:/c%3A/Users/mu070/OneDrive/Documents/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%20%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/%EA%B5%90%ED%86%B5%EC%82%AC%EA%B3%A0_%EC%98%81%EC%83%81_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%A4%EB%AA%85%EC%84%9C.csv)
+[`데이터 설명서`](vscode-local:/c%3A/Users/mu070/OneDrive/Documents/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%20%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/%EA%B5%90%ED%86%B5%EC%82%AC%EA%B3%A0_%EC%98%81%EC%83%81_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%84%A4%EB%AA%85%EC%84%9C.csv)
 ![alt text](image.png)
 
 ### 2. 모델 준비
@@ -24,7 +24,7 @@
 ### 3. Docker 컨테이너 빌드 및 실행
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 이 명령어는 `2578` 포트에서 API 서비스를, `82` 포트에서 Nginx 서비스를 시작합니다.
@@ -52,7 +52,7 @@ curl -X POST "http://localhost:2578/judicial-precedent" -F "video=@path_to_your_
 
 #### 응답
 
-응답은 [판례 API](https://github.com/taeyoung1005/judgment-api)에서 반환된 JSON 데이터입니다.
+응답은 [`판례 API`](https://github.com/taeyoung1005/judgment-api)에서 반환된 JSON 데이터입니다.
 
 ### 예시 응답
 
