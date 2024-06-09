@@ -6,7 +6,7 @@ services:
     ports:
       - "2578:2578"
     volumes:
-      - /work_dirs:/mmaction2/work_dirs
+      - ./work_dirs:/mmaction2/work_dirs
     deploy:
       resources:
         reservations:

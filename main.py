@@ -15,7 +15,7 @@ app = FastAPI(
 
 def video_classification(video_input_path):
     config_path = "work_dirs/my_custom_config_tsn/my_custom_config_tsn.py"
-    checkpoint_path = "work_dirs/my_custom_config_tsn/best_acc_top1_epoch_20.pth"
+    checkpoint_path = "work_dirs/my_custom_config_tsn/best_model.pth"
 
     config = Config.fromfile(config_path)
 
